@@ -18,7 +18,9 @@ if ($conn -> connect_errno) {
 }
 
 $sql = "
-   DELETE FROM paganti WHERE id=" . $id;
+  
+   DELETE FROM paganti WHERE id=" . $id ;
+
 
 
 $conn -> query($sql);

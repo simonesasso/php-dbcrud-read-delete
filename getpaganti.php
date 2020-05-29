@@ -18,7 +18,7 @@ if ($conn -> connect_errno) {
 }
 
 $sql = "
-   SELECT id, name, lastname, address
+   SELECT id, name, lastname, address, ospite_id
    FROM paganti
  ";
 

@@ -19,13 +19,20 @@ $( document ).ready(function() {
   function generaoutput(data) {
     var source = document.getElementById("template-lista").innerHTML;
     var template = Handlebars.compile(source);
+    var ospiteID
     for (var i = 0; i < data.length; i++) {
 
+      if (data[i]["ospite_id"] == null) {
+        ospiteID = "id non presente"
+      }else {
+        ospiteID = data[i]["ospite_id"]
+      }
       var context = {
       id: data[i]["id"],
       name: data[i]["name"],
       lastname: data[i]["lastname"],
       address: data[i]["address"],
+      ospiteid: ospiteID,
     };
 
 

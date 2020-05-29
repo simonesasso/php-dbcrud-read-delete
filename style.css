@@ -16,7 +16,9 @@ li{
   margin: 5px 0 5px 35%;
 }
 
-
+.address{
+  font-size: 12px;
+}
 .delete{
   position: absolute;
   top: 5px;
