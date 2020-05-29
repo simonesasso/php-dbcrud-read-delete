@@ -1,0 +1,25 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+ul{
+  list-style-type: none;
+}
+li{
+  width: 30%;
+  height: 80px;
+  padding: 10px;
+  background-color: violet;
+  text-align: center;
+  position: relative;
+  margin: 5px 0 5px 35%;
+}
+
+
+.delete{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}

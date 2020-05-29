@@ -2,12 +2,30 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <title></title>
   </head>
   <body>
     <ul>
-      
+
     </ul>
+    <!-- template handlebar ----------------------------------------------------->
+    <script id="template-lista" type="text/x-handlebars-template">
+      <li data-id="{{id}}">
+        {{name}} {{lastname}}
+        <span class='delete'> &times;</span>
+        <div>{{address}}</div>
+      </li>
+    </script>
+
+
+
+
+
+
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js" charset="utf-8"></script>

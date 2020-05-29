@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
   $.ajax({
-  url: "getpagamenti.php",
+  url: "getpaganti.php",
   method: "GET",
 
   success: function (data,stato) {
@@ -17,9 +17,22 @@ $( document ).ready(function() {
 
 
   function generaoutput(data) {
-
+    var source = document.getElementById("template-lista").innerHTML;
+    var template = Handlebars.compile(source);
     for (var i = 0; i < data.length; i++) {
-      $("ul").append("<li data-id=" + data[i]["id"] + ">" + data[i]["status"] + data[i]["price"] + "<span class='delete'>&times;</span>" + "</li>")
+
+      var context = {
+      id: data[i]["id"],
+      name: data[i]["name"],
+      lastname: data[i]["lastname"],
+      address: data[i]["address"],
+    };
+
+
+
+
+      var html = template(context);
+      $("ul").append(html);
     }
   }
 
@@ -31,13 +44,13 @@ $( document ).ready(function() {
 
     console.log(id);
     $.ajax({
-    url: "deletepagamento.php",
+    url: "deletepagante.php",
     method: "POST",
     data: {
       id: id
     },
     success: function () {
-      questo.remove(); 
+      questo.remove();
    },
     error: function (richiesta,stato,errore) {
     alert("Si è verificato un errore", errore);

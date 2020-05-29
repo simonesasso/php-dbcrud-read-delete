@@ -18,8 +18,8 @@ if ($conn -> connect_errno) {
 }
 
 $sql = "
-   SELECT id, status, price
-   FROM pagamenti
+   SELECT id, name, lastname, address
+   FROM paganti
  ";
 
 $results = $conn -> query($sql);
