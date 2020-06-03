@@ -17,13 +17,15 @@ if ($conn -> connect_errno) {
   return;
 }
 
-$sql = "
-  
-   DELETE FROM paganti WHERE id=" . $id ;
+if ($id) {
+  $sql = "
+
+     DELETE FROM paganti WHERE id=" . $id ;
 
 
 
-$conn -> query($sql);
+  $conn -> query($sql);
+}
 
 
 
